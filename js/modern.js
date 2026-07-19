@@ -37,7 +37,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // Typing Effect
   const typingElement = document.getElementById('typing-text');
   if (typingElement) {
-    const roles = ['System Engineer', 'PCB Designer', 'Hardware Developer'];
+    const roles = ['Master English.', 'Build Confidence.', 'Academic Excellence.'];
     let roleIndex = 0;
     let charIndex = 0;
     let isDeleting = false;
