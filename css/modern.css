@@ -188,6 +188,7 @@ ul {
   transition: all var(--transition-normal);
   display: flex;
   align-items: center;
+  gap: 0.4rem;
   white-space: nowrap;
 }
 
@@ -196,6 +197,10 @@ ul {
 }
 
 .nav-brand span {
+  color: inherit;
+}
+
+.nav-brand .brand-highlight {
   color: var(--primary-color);
 }
 
@@ -920,7 +925,7 @@ footer {
 .nav-logo-container {
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 0.4rem;
 }
 
 .nav-logo-img {
