@@ -281,26 +281,26 @@ ul {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 180%;
-  height: 180%;
-  background: radial-gradient(circle, rgba(0, 212, 255, 0.8) 0%, rgba(59, 130, 246, 0.6) 40%, rgba(15, 23, 42, 0) 70%);
+  width: 130%;
+  height: 130%;
+  background: radial-gradient(circle, rgba(37, 99, 235, 0.2) 0%, rgba(2, 6, 23, 0) 70%);
   z-index: -1;
   pointer-events: none;
-  animation: pulseGlow 3s infinite alternate;
-  filter: blur(15px);
+  animation: pulseGlow 4s infinite alternate;
+  filter: blur(20px);
 }
 
 @keyframes pulseGlow {
-  0% { transform: translate(-50%, -50%) scale(1); opacity: 0.7; }
-  100% { transform: translate(-50%, -50%) scale(1.15); opacity: 1; }
+  0% { transform: translate(-50%, -50%) scale(0.95); opacity: 0.5; }
+  100% { transform: translate(-50%, -50%) scale(1.05); opacity: 0.8; }
 }
 
 .profile-card-image {
-  background: rgba(15, 23, 42, 0.4);
-  border: 1px solid rgba(0, 212, 255, 0.6);
+  background: rgba(15, 23, 42, 0.55);
+  border: 1px solid var(--surface-border);
   border-radius: 24px;
   padding: 6px;
-  box-shadow: 0 0 30px rgba(0, 212, 255, 0.8), inset 0 0 20px rgba(0, 212, 255, 0.4);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5), inset 0 0 20px rgba(255, 255, 255, 0.05);
   backdrop-filter: blur(5px);
 }
 
@@ -759,29 +759,36 @@ footer {
 @media (max-width: 992px) {
   .hero-content-centered {
     flex-direction: column;
-    text-align: center;
-    gap: 2rem;
+    align-items: flex-start; /* Left-align for premium layout */
+    text-align: left;
+    gap: 1.5rem;
   }
   
   .description {
-    margin: 0 auto 2rem;
-    padding: 0 10px;
+    margin: 0 0 1.5rem 0;
+    padding: 0;
   }
   
   .separator {
-    justify-content: center;
+    justify-content: flex-start;
   }
   
   .hero-actions-vertical {
-    margin: 0 auto;
+    margin: 0;
+    max-width: 100%;
   }
 
   .about-grid, .resume-grid {
     grid-template-columns: 1fr;
   }
   
+  .profile-wrapper {
+    align-self: flex-start; /* Push logo card to the left side */
+    margin-bottom: 0.5rem;
+  }
+  
   .profile-card-image img {
-    width: 140px; /* Keep smaller size for mobile */
+    width: 130px; /* Scale down logo card size */
   }
   
   .hero-image {
@@ -791,15 +798,15 @@ footer {
   }
   
   .hero-text {
-    text-align: center;
+    text-align: left;
   }
   
   .hero-text p {
-    margin: 0 auto 2rem;
+    margin: 0 0 2rem 0;
   }
   
   .hero-actions {
-    justify-content: center;
+    justify-content: flex-start;
   }
   
   .stats-grid {
@@ -809,7 +816,11 @@ footer {
 
 @media (max-width: 768px) {
   .container {
-    padding: 0 1rem;
+    padding: 0 1.25rem;
+  }
+  
+  section {
+    padding: 50px 0; /* Reduced padding on mobile to fix uneven/large gaps */
   }
   
   .projects-grid, .contact-grid {
@@ -851,6 +862,11 @@ footer {
   .stats-grid {
     grid-template-columns: 1fr;
   }
+
+  h2.section-title {
+    font-size: 1.8rem;
+    margin-bottom: 1.75rem;
+  }
   
   .nav-brand {
     font-size: 1rem;
@@ -861,9 +877,9 @@ footer {
   }
   
   .name-title {
-    font-size: 1.7rem;
+    font-size: 2.2rem; /* Larger and bolder title as requested */
     margin-bottom: 0.75rem;
-    line-height: 1.25;
+    line-height: 1.2;
   }
   
   .role-title {
@@ -878,7 +894,7 @@ footer {
   
   .description {
     font-size: 0.95rem;
-    padding: 0 10px;
+    padding: 0;
   }
 }
 
